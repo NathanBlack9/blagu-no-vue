@@ -16,7 +16,7 @@
       padding: 30px 0 70px;
     }
   }
-  
+
   &__body {
     margin-top: 35px;
     display: flex;
@@ -44,7 +44,7 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 35px;
-  
+
     @media #{$handheld} {
       font-size: 18px;
       visibility: visible;
@@ -65,11 +65,26 @@
         margin-bottom: 10px;
       }
     }
-    
+
     &.hovered {
       .services__arrow {
         visibility: visible;
       }
+    }
+
+    &:nth-child(1) {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 8.23%, #000000 95.83%),
+        url('/build/img/services-1.jpg') 0 0 / cover no-repeat;
+    }
+
+    &:nth-child(2) {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 8.23%, #000000 95.83%),
+        url('/build/img/services-2.jpg') 0 0 / cover no-repeat;
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 8.23%, #000000 95.83%),
+        url('/build/img/services-3.jpg') 0 0 / cover no-repeat;
     }
 
     &-name {
@@ -86,7 +101,7 @@
     width: 20px;
     height: 20px;
     bottom: -15px;
-    background: url('/src/assets/img/arrow.png') 0 0 / contain no-repeat;
+    background: url('/build/img/arrow.png') 0 0 / contain no-repeat;
 
     @media #{$handheld} {
       visibility: visible;

@@ -15,7 +15,7 @@
     @media #{$handheld} {
       padding: 30px 0 20px;
     }
-    
+
     &::before {
       box-sizing: border-box;
       content: '';
@@ -73,9 +73,9 @@
       transform: translateY(-50%);
       width: 19px;
       height: 22px;
-      background: url('/src/assets/img/footer--phone.png')0 0 / cover no-repeat;
+      background: url('/build/img/footer--phone.png') 0 0 / cover no-repeat;
     }
-    
+
     &-tel {
       text-decoration: none;
       font-weight: normal;

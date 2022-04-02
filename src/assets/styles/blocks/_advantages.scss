@@ -64,13 +64,50 @@
         height: 130%;
       }
     }
-    
+
     &:not(:last-child) {
       margin-right: 40px;
 
       @media #{$mobile} {
         margin-right: 0;
         margin-bottom: 20px;
+      }
+    }
+
+    &:nth-child(1) .advantages__card-icon {
+      background: url('/build/img/advantages-card1.svg') 0 0 / cover no-repeat;
+      width: 146px;
+      height: 166px;
+    }
+
+    &:nth-child(2) .advantages__card-icon {
+      width: 153px;
+      height: 142px;
+      background: url('/build/img/advantages-card2.svg') 0 0 / cover no-repeat;
+    }
+
+    &:nth-child(3) .advantages__card-icon {
+      width: 162px;
+      height: 142px;
+      background: url('/build/img/advantages-card3.svg') 0 0 / cover no-repeat;
+
+      @media only screen and (max-width: 480px) {
+        width: 140px;
+        height: 122px;
+      }
+    }
+
+    &.hovered {
+      &:nth-child(1) .advantages__card-icon {
+        background: url('/build/img/advantages-card1-light.svg') 0 0 / cover no-repeat;
+      }
+
+      &:nth-child(2) .advantages__card-icon {
+        background: url('/build/img/advantages-card2-light.svg') 0 0 / cover no-repeat;
+      }
+
+      &:nth-child(3) .advantages__card-icon {
+        background: url('/build/img/advantages-card3-light.svg') 0 0 / cover no-repeat;
       }
     }
 

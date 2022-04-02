@@ -47,11 +47,12 @@
       li {
         list-style-type: none;
         border-radius: 50%;
-        width: 15px; height: 15px;
+        width: 15px;
+        height: 15px;
         background-color: $black;
         opacity: 0.5;
         @include TransitionMix(100ms);
-        
+
         @media #{$small-mobile} {
           width: 10px;
           height: 10px;
@@ -97,12 +98,19 @@
     // }
   }
 
+  .title {
+    margin-bottom: 45px;
+  }
+
   &__item {
     width: 33%;
     height: 530px;
     cursor: pointer;
     position: relative;
     border-radius: 6px;
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @media #{$handheld} {
       height: 375px;
@@ -133,7 +141,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-30%, -50%);
-        border: 10px solid transparent; 
+        border: 10px solid transparent;
         border-left: 15px solid $white;
       }
     }

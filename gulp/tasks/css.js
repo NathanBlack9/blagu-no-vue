@@ -8,14 +8,14 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
 
-gulp.task('css', function() {
+gulp.task('css', function () {
   return gulp.src("src/assets/styles/**/*.+(scss|sass)")
-      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-      .pipe(autoprefixer({
-          overrideBrowserslist:  ['last 2 versions'],
-          cascade: false
-      }))
-      .pipe(cleanCSS({compatibility: 'ie8'}))
-      .pipe(gulp.dest("build/styles"))
-    //   .pipe(browserSync.stream());
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
+    .pipe(gulp.dest("build/styles"))
+  //   .pipe(browserSync.stream());
 });

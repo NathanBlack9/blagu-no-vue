@@ -1,7 +1,7 @@
 // import './gulp/tasks/server.js';
-// import './gulp/tasks/compressJs.js';
 // import './gulp/tasks/html.js';
-// import './gulp/tasks/img.js';
+require('./gulp/tasks/compressJs.js');
+require('./gulp/tasks/img.js');
 require('./gulp/tasks/css.js');
 require('./gulp/tasks/watch.js');
 require('./gulp/tasks/default.js');

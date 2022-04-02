@@ -1,22 +1,202 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="apple-touch-icon" sizes="152x152" href="src/assets/favicon//apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicon//favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicon//favicon-16x16.png">
-    <link rel="manifest" href="src/assets/favicon//site.webmanifest">
-    <link rel="mask-icon" href="src/assets/favicon/safari-pinned-tab.svg" color="#000000">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
 
-    <title>blago-vue</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script src="/dist/build.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="152x152" href="src/assets/favicon//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicon//favicon-16x16.png">
+  <link rel="manifest" href="src/assets/favicon//site.webmanifest">
+  <link rel="mask-icon" href="src/assets/favicon/safari-pinned-tab.svg" color="#000000">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+  <link rel="stylesheet" href="/build/styles/styles.css">
+
+  <title>blago-vue</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="/" class="header__logo">
+          <img src="build/img/header-logo.png" alt="logo">
+          <h1 class="header__logo-text">Асфальтирование,<br> благоустройство<br> территорий в Москве</h1>
+        </a>
+        <div class="header__phones">
+          <a href="tel:+79851252266" class="header__phone">
+            <img src="build/img/header__phone.svg" alt="call" class="header__phone-icon">
+            <span>+7 (985)-125-22-66</span>
+          </a>
+          <a href="https://wa.me/79684056600" class="header__phone" target="_blank">
+            <img src="build/img/header__whatsapp.svg" alt="call" class="header__whats-icon">
+            <span>+7 (968)-405-66-00</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="services">
+    <div class="container">
+      <div class="services__inner">
+        <h2 class="title">Наши услуги</h2>
+        <div class="services__body">
+          <a href="#asphalting" class="services__item  js-hovered-toggler">
+            <div class="services__item-name">Асфальтирование дорог</div>
+            <div class="services__arrow animate__animated animate__fadeInDown animate__infinite"></div>
+          </a>
+          <a href="#beautification" class="services__item js-hovered-toggler">
+            <div class="services__item-name">Благоустройство територий</div>
+            <div class="services__arrow animate__animated animate__fadeInDown animate__infinite"></div>
+          </a>
+          <a href="#delivery" class="services__item js-hovered-toggler">
+            <div class="services__item-name">Доставка строительных материалов</div>
+            <div class="services__arrow animate__animated animate__fadeInDown animate__infinite"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="advantages">
+    <div class="container">
+      <div class="advantages__inner">
+        <h2 class="title">Преимущества</h2>
+        <div class="advantages__body">
+          <div class="advantages__card js-hovered-toggler">
+            <div alt="" class="advantages__card-icon"></div>
+            <h3 class="advantages__card-name">Больше 7 лет на рынке</h3>
+            <p class="advantages__card-text">Для нас показатель качества работы является опыт, накопленный за эти годы
+            </p>
+          </div>
+          <div class="advantages__card js-hovered-toggler">
+            <div alt="" class="advantages__card-icon"></div>
+            <h3 class="advantages__card-name">Не затягиваем сроки выполнение проектов</h3>
+            <p class="advantages__card-text">Мы не затягиваем установленные сроки. Уважаем свое время и время клиентов
+            </p>
+          </div>
+          <div class="advantages__card js-hovered-toggler">
+            <div alt="" class="advantages__card-icon"></div>
+            <h3 class="advantages__card-name">Не завышаем стоимость</h3>
+            <p class="advantages__card-text">Предоставляем четкую и понятную смету на все услуги до их предоставления
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="product-one" id="asphalting">
+    <div class="container">
+      <div class="product-one__inner">
+        <h2 class="title">Асфальтирование дорог</h2>
+        <p class="product-one__subtitle">Мы занимаемся асфальтированием и ремонтом дорог в Москве и Подмосковье.</p>
+        <p class="product-one__list-title">3 главные причины, почему нужно выбирать именно нас:</p>
+        <ul class="product-one__list">
+          <li class="product-one__list-item">
+            мы выполняем работу строго в срок;
+          </li>
+          <li class="product-one__list-item">
+            качество дороги – в соответствии с ГОСТ и СНиП;
+          </li>
+          <li class="product-one__list-item">
+            мы оказываем услуги по честной цене, которая складывается из расходов на материал, объема работы и
+            количество задействованной техники.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="works">
+    <div class="container">
+      <div class="works__inner">
+        <h2 class="title">Наши работы по асфальтированию</h2>
+        <div class="works__body js-works-slider">
+          <div class="works__item" data-fancybox href="/src/assets/img/works1.jpg"
+            style="background: url('/src/assets/img/works1.jpg')"></div>
+          <div class="works__item work__item--video" data-fancybox href="/src/assets/img/works2--video.mp4"
+            style="background: url('/src/assets/img/works2.jpg')"></div>
+          <div class="works__item work__item--video" data-fancybox href="/src/assets/img/works3--video.mp4"
+            style="background: url('/src/assets/img/works3.jpg')"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="product-one" id="beautification">
+    <div class="container">
+      <div class="product-one__inner">
+        <h2 class="title">Благоустройство територий</h2>
+        <p class="product-one__subtitle">Мы также благоустраиваем придомовые территории (двора).</p>
+        <p class="product-one__list-title">Под благоустройством мы подразумеваем:</p>
+        <ul class="product-one__list">
+          <li class="product-one__list-item">
+            ремонт дворовых участков многоквартирных или частных домов;
+          </li>
+          <li class="product-one__list-item">
+            монтаж ограждения, детских площадок;
+          </li>
+          <li class="product-one__list-item">
+            окрашивание элементов благоустройства;
+          </li>
+          <li class="product-one__list-item">
+            работы по озеленению.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="works">
+    <div class="container">
+      <div class="works__inner">
+        <h2 class="title">Наши работы по благоустройству</h2>
+        <div class="works__body js-slider">
+          <div class="works__item" data-fancybox href="/src/assets/img/works-beauty1.jpg"
+            style="background: url('/src/assets/img/works-beauty1.jpg')"></div>
+          <div class="works__item" data-fancybox href="/src/assets/img/works-beauty2.jpg"
+            style="background: url('/src/assets/img/works-beauty2.jpg')"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="product-one" id="delivery">
+    <div class="container">
+      <div class="product-one__inner">
+        <h2 class="title">Доставка строительных материалов</h2>
+        <p class="product-one__subtitle"></p>
+        <p class="product-one__list-title">Мы занимаемся доставкой таких строительные материалов как:</p>
+        <ul class="product-one__list">
+          <li class="product-one__list-item">
+            щебень (гравийный, известняк);
+          </li>
+          <li class="product-one__list-item">
+            песок (речной, карьерный);
+          </li>
+          <li class="product-one__list-item">
+            асфальтовая крошка.
+          </li>
+        </ul>
+        <span class="product-one__remark">* доставка материалов от 3 м<sup>3</sup></span>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__copyright">© 2022 <span>Все права защищены.</span></div>
+        <a href="#" class="footer__docs">Политика конфиденциальности</a>
+        <div class="footer__contact">
+          <a href="tel:+79851252266" class="footer__contact-tel">+7 (985)-125-22-66</a>
+          <a href="tel:+79684056600" class="footer__contact-tel">+7 (968)-405-66-00</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/build/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="/build/js/vendor/jquery.selectric.min.js"></script>
+  <script src="/build/js/vendor/slick.min.js"></script>
+  <script src="/build/js/vendor/fancybox.js"></script>
+  <script src="/build/js/common-min.js"></script>
+</body>
+
 </html>
