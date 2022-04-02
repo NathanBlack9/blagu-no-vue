@@ -1,0 +1,103 @@
+.advantages {
+  &__inner {
+    padding-bottom: 90px;
+  }
+
+  &__body {
+    max-width: 1140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    @media #{$mobile} {
+      flex-direction: column;
+    }
+
+    @media #{$small-mobile} {
+      margin-top: 20px;
+    }
+  }
+
+  &__card {
+    border: 1px solid $gray;
+    border-radius: 15px;
+    padding: 30px 40px;
+    text-align: center;
+    color: $white;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    @media #{$small-handheld} {
+      padding: 25px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -140px;
+      width: 200%;
+      height: 66%;
+      background-color: $gray;
+      z-index: -1;
+      transform: rotate(-9.64deg);
+      @include TransitionMix(400ms);
+
+      @media #{$handheld} {
+        height: 69%;
+      }
+
+      @media #{$small-handheld} {
+        transform: rotate(355deg);
+        height: 59%;
+      }
+    }
+
+    &.hovered::after {
+      height: 120%;
+
+      @media #{$mobile} {
+        height: 130%;
+      }
+    }
+    
+    &:not(:last-child) {
+      margin-right: 40px;
+
+      @media #{$mobile} {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-icon {
+      margin: 0 auto;
+      margin-bottom: 45px;
+      @include TransitionMix(200ms);
+    }
+
+    &-name {
+      font-weight: bold;
+      font-size: 28px;
+      margin-bottom: 50px;
+
+      @media #{$small-handheld} {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-text {
+      font-weight: normal;
+      font-size: 18px;
+
+      @media #{$small-handheld} {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+.header {
+  width: 100%;
+  background-color: $gray;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 88px 0;
+
+    @media #{$small-notebook} {
+      align-items: flex-end;
+      padding: 20px 0 30px;
+    }
+    
+    @media #{$handheld} {
+      padding: 15px 0;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    
+    @media #{$small-notebook} {
+      align-items: flex-end;
+    }
+
+    >img {
+
+      @media #{$small-notebook} {
+        max-width: 110px;
+      }
+      
+      @media #{$handheld} {
+        max-width: 75px;
+      }
+
+      @media #{$small-mobile} {
+        max-width: 60px;
+      }
+    }
+
+    &-text {
+      max-width: 400px;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 41px;
+      color: $white;
+      margin-left: 10px;
+
+      @media #{$small-notebook} {
+        font-size: 30px;
+        line-height: 30px;
+        margin-left: 5px;
+      }
+
+      @media #{$handheld} {
+        font-size: 18px;
+        line-height: 1;
+        margin-left: 5px;
+      }
+
+      @media #{$small-mobile} {
+        font-size: 15px;
+      }
+
+      @media only screen and (max-width: 375px) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__phones {
+    display: flex;
+    flex-direction: column;
+
+
+    @media #{$handheld} {
+      flex-direction: row; 
+    }
+  }
+
+  &__phone {
+    text-decoration: none;
+    color: $white;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 41px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include TransitionMix(100ms);
+
+    @media #{$small-notebook} {
+      font-size: 20px;
+    }
+
+    @media #{$handheld} {
+      font-size: 15px;
+    }
+
+    @media #{$mobile} {
+      font-size: 0;
+    }
+
+    &:first-child {
+      margin-bottom: 10px;
+
+      @media #{$handheld} {
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+
+      @media #{$mobile} {
+        margin-right: 10px;
+      }
+    }
+
+    span {
+      margin-left: 15px;
+
+      @media #{$handheld} {
+        margin-left: 5px;
+      }
+    }
+
+    &:hover img{
+      
+      &.header__phone-icon {
+        background-color: #1E90FF;
+      }
+
+      &.header__whats-icon {
+        background-color: #25D366;
+      }
+    }
+
+    img {
+      display: block;
+      background-color: $white;
+      border-radius: 6px;
+      @include TransitionMix(100ms);
+
+      @media #{$small-notebook} {
+        max-width: 45px;
+      }
+
+      @media #{$handheld} {
+        max-width: 35px;
+      }
+    }
+  }
+
+  &__phone-icon {
+    padding: 6.5px 5px 6.5px 8px;
+  }
+
+  &__whats-icon {
+    padding: 8px;
+
+    @media #{$handheld} {
+      padding: 4px;
+    }
+  }
+}

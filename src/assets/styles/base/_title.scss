@@ -1,0 +1,21 @@
+.title {
+  text-align: center;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+  color: $gray;
+
+  @media #{$handheld} {
+    font-size: 30px;
+  }
+
+  @media #{$small-mobile} {
+    font-size: 22px;
+  }
+
+  &.dark--title {
+    color: $white;
+  }
+}

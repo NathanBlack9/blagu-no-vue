@@ -1,0 +1,145 @@
+.works {
+  &__inner {
+    padding: 70px 0 105px;
+
+    @media #{$small-mobile} {
+      padding: 40px 0 70px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 0;
+    position: relative;
+
+    .slick-list {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .slick-track {
+      display: flex;
+    }
+
+    .slick-slide {
+      margin: 0 10px;
+
+      @media #{$small-mobile} {
+        margin: 0;
+      }
+    }
+
+    .slick-dots {
+      position: absolute;
+      left: 50%;
+      bottom: -50px;
+      transform: translateX(-50%);
+      padding-left: 0;
+      display: flex !important;
+      flex-direction: row;
+
+      @media #{$small-mobile} {
+        bottom: -30px;
+      }
+
+      li {
+        list-style-type: none;
+        border-radius: 50%;
+        width: 15px; height: 15px;
+        background-color: $black;
+        opacity: 0.5;
+        @include TransitionMix(100ms);
+        
+        @media #{$small-mobile} {
+          width: 10px;
+          height: 10px;
+        }
+
+        &.slick-active {
+          opacity: 1;
+        }
+      }
+
+      li:not(:last-child) {
+        margin-right: 20px;
+
+        @media #{$small-mobile} {
+          margin-right: 14px;
+        }
+      }
+
+      li button {
+        display: none;
+      }
+    }
+
+    // .slick-arrow {
+    //   font-size: 0;
+    //   position: absolute;
+    //   top: 50%;
+    //   width: 20px; height: 20px;
+    //   border: 0;
+    //   background-color: transparent;
+
+    //   &.slick-prev {
+    //     left: -10px;
+    //     background: url('/src/assets/img/right-arrow.png') 0 0/contain no-repeat;
+    //     transform: translateY(-50%) rotate(-180deg);
+    //   }
+
+    //   &.slick-next {
+    //     right: -10px;
+    //     background: url('/src/assets/img/right-arrow.png') 0 0/contain no-repeat;
+    //     transform: translateY(-50%);
+    //   }
+    // }
+  }
+
+  &__item {
+    width: 33%;
+    height: 530px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 6px;
+
+    @media #{$handheld} {
+      height: 375px;
+    }
+
+    @media only screen and (max-width: 700px) and (min-width: 481px) {
+      height: 265px;
+    }
+
+    &.work__item--video {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 55px;
+        height: 55px;
+        border: 3px solid $white;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      &::after {
+        cursor: pointer;
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-30%, -50%);
+        border: 10px solid transparent; 
+        border-left: 15px solid $white;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@mixin TransitionMix($delay) {
+  transition: all $delay linear;
+}
+
+@mixin Underline($color, $left) {
+  &::before{
+    content: '';
+    position: absolute;
+    left: $left;
+    bottom: 0;
+    height: 9px;
+    width: 76px;
+    background-color: $color;
+    z-index: -1;
+    @include TransitionMix(150ms);
+  }
+  
+  &:hover:before{
+    left: -5px;
+  }
+}
