@@ -148,6 +148,10 @@
 
     &:not(:last-child) {
       margin-right: 25px;
+
+      @media #{$small-mobile} {
+        margin-right: 0;
+      }
     }
   }
 }

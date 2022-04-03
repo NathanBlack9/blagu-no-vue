@@ -9,7 +9,7 @@ $('.js-works-slider').slick({
   "touchThreshold": 100,
   "responsive": [
     {
-      "breakpoint": 1024,
+      "breakpoint": 1024 + 1,
       "settings": {
         "slidesToShow": 2,
         "slidesToScroll": 1,
@@ -17,12 +17,12 @@ $('.js-works-slider').slick({
       }
     },
     {
-      "breakpoint": 480,
+      "breakpoint": 480 + 1,
       "settings": {
         "slidesToShow": 1,
         "slidesToScroll": 1,
         "dots": true,
       }
-    }
+    },
   ]
 });
